@@ -129,7 +129,7 @@ module SwaggerClient
 
     def initialize(type)
       @scheme = 'https'
-      @host = 'stg-api.gmo-aozora.com'
+      @host = ENV.fetch("AOZORA_API_HOST") { 'stg-api.gmo-aozora.com' }
       @base_path = '/ganb/api/' + type + '/v1'
       @api_key = {}
       @api_key_prefix = {}
