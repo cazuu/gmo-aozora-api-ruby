@@ -125,6 +125,11 @@ module SwaggerClient
         end
       end
 
+      # set proxy
+      if ENV['PROXIMO_URL'].present?
+        req_opts[:proxy] = ENV['PROXIMO_URL']
+      end
+
       request = Typhoeus::Request.new(url, req_opts)
       download_file(request) if opts[:return_type] == 'File'
       request
