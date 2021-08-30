@@ -127,7 +127,8 @@ module SwaggerClient
 
       # set proxy
       if ENV['PROXIMO_URL'].present?
-        req_opts[:proxy] = ENV['PROXIMO_URL']
+        port = ENV.fetch('PROXIMO_PORT') { "80" }
+        req_opts[:proxy] = "#{ENV['PROXIMO_URL']}:#{port}"
       end
 
       request = Typhoeus::Request.new(url, req_opts)
