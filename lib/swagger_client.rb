@@ -21,6 +21,10 @@ require 'swagger_client/configuration'
 Dir.glob(File.expand_path('../swagger_client/auth/models/*', __FILE__)).each do |file|
   require file
 end
+## corporation
+Dir.glob(File.expand_path('../swagger_client/corporation/models/*', __FILE__)).each do |file|
+  require file
+end
 ## webhooks
 Dir.glob(File.expand_path('../swagger_client/webhook/models/*', __FILE__)).each do |file|
   require file
@@ -31,6 +35,10 @@ end
 ## auth
 require 'swagger_client/auth/api/authorization_api'
 require 'swagger_client/auth/api/token_api'
+## corporation
+Dir.glob(File.expand_path('../swagger_client/corporation/api/*', __FILE__)).each do |file|
+  require file
+end
 ## webhooks
 Dir.glob(File.expand_path('../swagger_client/webhook/api/*', __FILE__)).each do |file|
   require file
