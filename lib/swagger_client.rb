@@ -26,9 +26,9 @@ Dir.glob(File.expand_path('../swagger_client/corporation/models/*', __FILE__)).e
   require file
 end
 ## webhooks
-Dir.glob(File.expand_path('../swagger_client/webhook/models/*', __FILE__)).each do |file|
-  require file
-end
+# Dir.glob(File.expand_path('../swagger_client/webhook/models/*', __FILE__)).each do |file|
+#   require file
+# end
 
 
 # APIs
@@ -40,9 +40,9 @@ Dir.glob(File.expand_path('../swagger_client/corporation/api/*', __FILE__)).each
   require file
 end
 ## webhooks
-Dir.glob(File.expand_path('../swagger_client/webhook/api/*', __FILE__)).each do |file|
-  require file
-end
+# Dir.glob(File.expand_path('../swagger_client/webhook/api/*', __FILE__)).each do |file|
+#   require file
+# end
 
 
 module SwaggerClient
