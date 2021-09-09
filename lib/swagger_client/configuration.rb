@@ -150,7 +150,7 @@ module SwaggerClient
 
     # The default Configuration object.
     def self.default(type)
-      @@default ||= Configuration.new(type)
+      Configuration.new(type)
     end
 
     def configure
